@@ -102,6 +102,6 @@ Consider transmission of binary tree as example.
 * [X] intro page
 * [X] user download page
 * [X] get start
-* [ ] user docs
-* [ ] lexers
+* [X] user docs
+* [X] parsing
 * [ ] type checks

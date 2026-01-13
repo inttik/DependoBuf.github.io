@@ -9,12 +9,19 @@ class DbufLexer(RegexLexer):
 
     tokens = {
         'root': [
+            # Blocks using for documentation only
+            (r'\[[^\]]*\]', String), 
+            (r'\!\{', String), 
+            (r'\}\!', String), 
+
             # Space
             (r'\s+', Whitespace),
             
             # Keyword type declaration
             (r'\b(message)\b', Keyword.Declaration),
             (r'\b(enum)\b', Keyword.Declaration),
+            (r'\b(use)\b', Keyword.Declaration),
+            (r'\b(as)\b', Keyword.Declaration),
 
             # Boolean constants
             (r'\b(true)\b', Keyword.Constant),
